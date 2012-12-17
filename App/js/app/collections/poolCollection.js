@@ -4,7 +4,10 @@ FED2.Pool = Backbone.Collection.extend({
 	model: FED2.Team,
 
 	// Initialize collection
-	comparator : function(league) {
-		return league.get("name");
+	comparator : function(team) {
+		return team.get("team");
+
 	}
+
+
 });
