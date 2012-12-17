@@ -8,15 +8,19 @@ FED2.PoolView = Backbone.View.extend({
 		// Specify collection for this view
 		this.collection = new FED2.Pool(FED2.poolData);
 
-		// Render view
-        this.render();
+		var filtered = _.filter(this.collection.models, function(data) {
+		  	return data.get("Win") == "2";
+		});
+
+		this.render(filtered);
+
     },
 
 	// Render view
-    render: function () {
+    render: function (filter) {
         var self = this;
 
-        _.each(this.collection.models, function (item) {
+        _.each(filter, function (item) {
             self.renderPool(item);
         }, this);
     },
@@ -34,4 +38,4 @@ FED2.PoolView = Backbone.View.extend({
 });
 
 // Kickstart the application by creating an instance of LeagueView
-var schedule = new FED2.PoolView();
+var ranking = new FED2.PoolView();
