@@ -1,4 +1,4 @@
-// Define game view
+// Define pool view
 FED2.TeamView = Backbone.View.extend({
     // Define element (this.el)
     tagName: "tr",
@@ -8,11 +8,11 @@ FED2.TeamView = Backbone.View.extend({
 
 	// Attach event handler to view elements
 	events: {
-	    "click a.delete": "deleteTournament"
+	    "click a.delete": "deletePool"
 	},
 	
-	// Delete tournament model
-	deleteTournament: function (e) {
+	// Delete pool model
+	deletePool: function (e) {
 		e.preventDefault();
 	    
 		var removedType = this.model.get("team").toLowerCase();

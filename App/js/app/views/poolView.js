@@ -49,7 +49,7 @@ FED2.PoolView = Backbone.View.extend({
         this.list.append(teamView.render().el);
     },
     
-    // Add tournament model
+    // Add pool model
 	addPool: function (e) {
 	    e.preventDefault();
 	    var newModel = {};
@@ -70,7 +70,7 @@ FED2.PoolView = Backbone.View.extend({
 	    this.collection.reset(FED2.poolData);
 	},
 	
-	// Remove tournament model
+	// Remove pool model
 	removePool: function (removedModel) {
 	    var removed = removedModel.attributes;
 	    _.each(FED2.poolData, function (item) {
