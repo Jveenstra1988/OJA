@@ -1,4 +1,13 @@
 FED2.Team = Backbone.Model.extend({
+        defaults: {
+        "team": "unknown",
+	"Win": "unknown",
+	"Lost": "unknown",
+	"Sw": "unknown",
+	"Sl": "unknown",
+	"Pw": "unknown",
+	"Pl": "unknown"
+        },
 	// Initialize model
 	initialize: function () {
 		// Calculate

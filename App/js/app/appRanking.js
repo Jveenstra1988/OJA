@@ -2,7 +2,7 @@ var FED2 = FED2 || {};
 
 (function ($) {
 
-    // # League data #
+    //pool data
 	FED2.poolData = [
 	    { team: "Chasing", Win: "2", Lost: "2", Sw: "7", Sl: "9", Pw: "35", Pl: "39"},
 	    { team: "Boomsquad", Win: "2", Lost: "2", Sw: "9", Sl: "8", Pw: "36", Pl: "34"},

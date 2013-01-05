@@ -3,23 +3,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Backbone.js Web App</title>
-		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+        <title>Ranking scores</title>
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
        <!-- <link rel="stylesheet" href="css/screen.css" />-->
     </head>
     <body>
+        
 		<div id="wrapper">
-		<header>
+                    
+                <article id="pool">
+                    <nav class="actions">
+                            <ul>
+                                <li id="filter">
+                                        <label>Show:</label>	
+                                </li>
+                                <li><button id="showForm">Add new tournament</button></li>
+                            </ul>
+                    </nav>
 	        
-	        </header>
 
-	        <article>
+	        
 	            <header>
 	                <h1>Ranking</h1>
 	            </header>
-	            <table id="pool">
+	            <table class="pools">
 	                <tr>
-	                    <th class="team">Team</th>
+	                    <th>Team</th>
 	                    <th>W</th>
 	                    <th>L</th>
 	                    <th>Sets won</th>
@@ -30,7 +40,19 @@
 	                </tr>
 
 	            </table>
+                    <form id="addPool" action="#" class="form-2">
+				<h1>Add ranking</h1>
+				    <label for="team">Name:</label><input id="team" placeholder="team" type="text" />
+				    <label for="Win">Format:</label><input id="Win"  placeholder="win" type="text" />
+				    <label for="Lost">Format:</label><input id="Lost"  placeholder="lost" type="text" />
+				    <label for="Sw">Format:</label><input id="Sw"  placeholder="sets won" type="text" />
+				    <label for="Sl">Format:</label><input id="Sl"  placeholder="sets lost" type="text" />
+				    <label for="Pw">Format:</label><input id="Pw"  placeholder="points won" type="text" />
+				    <label for="Pl">Format:</label><input id="Pl"  placeholder="points lost" type="text" />
+				    <div class="clearfix"><input type="submit" id="add" value="Add" /></div>
+				</form>
 	        </article>
+                    
 		</div>
 
 		<!-- Template -->
@@ -42,8 +64,10 @@
 			<td><%= Sl %></td>
 			<td><%= Pw %></td>
 			<td><%= Pl %></td>
-			<td><%= saldo %></td>
+			<td><%= saldo %> </td>
+                        <td><a href="#" class="delete">Delete</a></td>
        	</script>
+
 
 		<!-- Libraries -->
         <script src="js/libs/jquery-1.7.1.min.js"></script>
