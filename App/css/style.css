@@ -1,8 +1,108 @@
 body{
-    width:960px;
-    margin:0 auto;
+    width:100%;
+    margin:0px;
+    font-family:Calibri, sans-serif;
+    background:#001015;
+}
+
+h1{
+    color:#1DBDF1;
+    margin-top:50px;
 }
 
 table td{
     padding:10px;
+}
+
+nav{
+    background:#1DBDF1;
+    padding-top:40px;
+    padding-bottom:40px;
+    color:#fff;
+    overflow:hidden;
+}
+
+nav ul{
+    margin:0px;
+    list-style:none;
+    width:40%;
+    overflow:hidden;
+    margin:0 auto;
+    
+}
+nav ul li{
+    float:left;
+    margin-top:6px;
+}
+
+nav select{
+    padding:6px;
+
+    margin-right:70px;
+    color:#0081b5;
+}
+
+#showForm{
+   margin-top:2px;
+    background:#fff;
+    padding:7px 15px;
+    color:#0081b5;
+    cursor:pointer;
+    font-size:14px;
+    margin-left:3px;
+}
+
+#showForm:hover{
+    opacity:0.8;
+}
+
+#wrapper{
+    width:80%;
+    margin:0 auto;
+}
+
+table{
+    width:100%;
+    text-align:center;
+    color:#fff;
+}
+
+td.team,
+th.team{
+    text-align:left;
+}
+
+th.team{
+    padding-left:10px;
+}
+
+tr.definitie{
+    height:50px;
+}
+
+tr{
+    background:#1DBDF1;
+}
+
+td a{
+    color:#fff;
+}
+
+td a:hover{
+    opacity:0.6;
+}
+
+#addPool{
+   display:none;
+    color:#fff;
+}
+#add{
+    margin-top:20px;
+}
+input{
+    width:48%;
+    padding:13px;
+    border:1px solid #999;
+    font-size:14px;
+    color:#1DBDF1;
 }

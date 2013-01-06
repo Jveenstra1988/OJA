@@ -31,7 +31,7 @@ FED2.PoolView = Backbone.View.extend({
 
 	// Render view
     render: function () {
-        this.$el.find("table.pools").html("<tr><th>Team</th><th>W</th><th>L</th><th>Sets won</th><th>Sets lost</th><th>Points won</th><th>Points lost</th><th>+/-</th></tr>");
+        this.$el.find("table.pools").html("<tr class='definitie'><th class='team'>Team</th><th>Win</th><th>Lost</th><th>Sets won</th><th>Sets lost</th><th>Points won</th><th>Points lost</th><th>+/-</th></tr>");
 
         _.each(this.collection.models, function (item) {
             this.renderPool(item);
