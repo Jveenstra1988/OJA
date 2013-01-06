@@ -18,7 +18,7 @@ FED2.TeamView = Backbone.View.extend({
 		var removedType = this.model.get("team").toLowerCase();
 	    
 		this.model.destroy();
-	    this.remove();
+	        this.remove();
 	    
 		if (_.indexOf(FED2.ranking.getTypes(), removedType) === -1) {
 	        FED2.ranking.$el.find("#filter select").children("[value='" + removedType + "']").remove();
@@ -32,7 +32,7 @@ FED2.TeamView = Backbone.View.extend({
 	// Store template in variable
         var tmpl = _.template(this.template);
 
-	// Inject the rendered tempate into the views element
+	// Inject the rendered template into the views element
         $(this.el).html(tmpl(this.model.toJSON()));
 
 	return this;
