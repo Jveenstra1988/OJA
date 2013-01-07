@@ -10,16 +10,16 @@ FED2.TeamView = Backbone.View.extend({
 	events: {
 	    "click a.delete": "deletePool"
 	},
-	
+
 	// Delete pool model
 	deletePool: function (e) {
 		e.preventDefault();
-	    
+
 		var removedType = this.model.get("team").toLowerCase();
-	    
+
 		this.model.destroy();
 	        this.remove();
-	    
+
 		if (_.indexOf(FED2.ranking.getTypes(), removedType) === -1) {
 	        FED2.ranking.$el.find("#filter select").children("[value='" + removedType + "']").remove();
 	    }
