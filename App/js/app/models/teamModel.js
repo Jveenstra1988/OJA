@@ -1,4 +1,4 @@
-FED2.Team = Backbone.Model.extend({
+FED2.TeamModel = Backbone.Model.extend({
         defaults: {
         "team": "unknown",
 	"Win": "unknown",
