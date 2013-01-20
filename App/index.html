@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li id="filter">
-                        <label>Choose team:</label>	
+                        <label>Choose team:</label>
                     </li>
                     <li><div id="showForm">Add new team</div></li>
                 </ul>
@@ -44,14 +44,14 @@
 
         <!-- Template -->
     <script id="teamTemplate" type="text/template">
-        <td class="team"><%= team %></td>
-        <td><%= Win %></td>
-        <td><%= Lost %></td>
+        <td class="team"><%= name %></td>
+        <td><%= start_date %></td>
+        <td><%= resource_uri %></td>
         <td><%= Sw %></td>
         <td><%= Sl %></td>
         <td><%= Pw %></td>
         <td><%= Pl %></td>
-        <td><%= saldo %> </td>
+
         <td><a href="#" class="delete">Delete</a></td>
     </script>
 
