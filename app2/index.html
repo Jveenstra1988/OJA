@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Backbone.js Web App</title>
+        <link rel="stylesheet" href="css/screen.css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+    </head>
+    <body>	
+	        <article id="league">
+				
+	        	<ul class="tournaments"></ul>
+
+				<header>
+                    <h1>Game</h1>
+                </header>
+
+                <table class="games" >
+                </table>
+
+
+	        </article>
+		
+		
+
+        <script id="gameTemplate" type="text/template">
+			<tr>
+				<td class="first"><%= game_id %></td>
+				<td ><%= team_1 %></td>
+				<td ><%= team_1_score %></td>
+				<td ><%= team_2 %></td>
+				<td class="last"><%= team_2_score %></td>
+			</tr>
+        </script>
+		
+		<!-- Libraries -->
+        <script src="js/libs/jquery-1.7.1.min.js"></script>
+        <script src="js/libs/json2.js"></script>
+        <script src="js/libs/underscore-min.js"></script>
+        <script src="js/libs/backbone-min.js"></script>
+
+		<!-- Application -->
+		<script src="js/app/app.js"></script>
+		<script src="js/app/models/setModel.js"></script>
+		<script src="js/app/collections/gameCollection.js"></script>
+		<script src="js/app/views/setView.js"></script>
+		<script src="js/app/views/gameView.js"></script>
+		
+        
+    </body>
+</html>
