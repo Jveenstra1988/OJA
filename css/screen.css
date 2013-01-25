@@ -20,10 +20,12 @@ header{
 h1 {
 	font-family: helvetica;
 	font-size:1.2em;
-	width:90%;
+	width:100%;
 	padding:12px;
+	display:inline-block;
 	color: white;
 	font-weight: normal;
+	text-align: center;
 }
 h2 {
 	font-weight:normal;
@@ -81,7 +83,7 @@ table th {
 	font-family: helvetica;
 	color: #fefecf;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 table td {
@@ -90,7 +92,8 @@ table td {
 	font-family: helvetica;
 	color: #fefecf;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 13px;
+	text-align: center;
 }
 
 .first{
@@ -113,6 +116,16 @@ table td {
 	-webkit-border-top-right-radius:5px;
 }
 
+.last a{
+	text-decoration: none;
+	padding: 21px 10px 6px 10px;
+
+}
+
+.last img{
+	height: 29px;
+}
+
 th {
 	display: table-cell;
 	vertical-align: inherit;
@@ -120,6 +133,26 @@ th {
 
 .delete {
 	text-decoration: none;
+}
+
+.ranking_button{
+	background:url(../img/button.png) repeat-x;
+	float:right;
+	margin-top: -38px;
+	margin-right: 12px;
+	height:21px;
+	width: 76px;
+	padding-top: 5px;
+	text-align: center;
+	border-radius: 6px;
+	font-family: helvetica;
+	font-size:13px;
+	border: solid 1px #34979b;
+	border-bottom: solid 1px #24747b;
+	color: #0d7070;
+	text-shadow: 0px 1px white;
+	font-weight: bold;
+
 }
 
 @media only screen and (max-device-width: 480px) {

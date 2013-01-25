@@ -19,7 +19,7 @@ FED2.GameView = Backbone.View.extend({
                     // model.url = model.get('resource_uri');
                 // });
                 // Call the addTournament method
-                // self.addTournament();
+                self.addTournament();
 
                 // hacky way to add the names to the teams                
                 $.getJSON(
@@ -30,6 +30,7 @@ FED2.GameView = Backbone.View.extend({
                             model.set('team_2_name', data.team_2.name);
                         });
                         self.render();
+
                     }
                 );
             }
@@ -85,25 +86,25 @@ FED2.GameView = Backbone.View.extend({
         // Save a new model to the API, this is a "POST" request
         // the save function takes two parameters,
         
-        // newModel.save(
-        //     // The first parameter is the data object
-        //     newModel.toJSON(), {
-        //     // The second parameter takes request options
-        //     success: function(data) {
-        //         // On succes set the new url for the model
-        //         newModel.url = newModel.get('resource_uri');
-        //     },
-        //     error: function(data) {
-        //         // On error log the error in the console
-        //         console.log('error');
-        //     },
-        //     // Define an authorization header to allow for posting to the API
-        //     headers: {
-        //         Authorization: 'bearer ' + config.access_token
+         newModel.save(
+             // The first parameter is the data object
+             newModel.toJSON(), {
+             // The second parameter takes request options
+            success: function(data) {
+                 // On succes set the new url for the model
+                 newModel.url = newModel.get('resource_uri');
+             },
+             error: function(data) {
+                 // On error log the error in the console
+                 console.log('error');
+         },
+             // Define an authorization header to allow for posting to the API
+             headers: {
+                 Authorization: 'bearer ' + config.access_token
 
 
-        //     }
-        // });
+            }
+         });
 
         /*newModel.save(data, options)*/
     }
