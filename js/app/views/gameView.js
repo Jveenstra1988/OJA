@@ -1,19 +1,19 @@
 // define tournaments view
 FED2.GameView = Backbone.View.extend({
     el: $("#wrapper"),
-	
+
     initialize: function (config) {
         this.id = config.id;
-		var self = this;
+	var self = this;
 
 
         this.collection = new FED2.League([], {id: this.id});
         // Fetch data from the API, this is a "GET" request
         this.render();
         this.collection.fetch({
-            // If the request succeeds, the success callback function is executed 
+            // If the request succeeds, the success callback function is executed
             success: function(data) {
-                // Loop through the fetched models 
+                // Loop through the fetched models
                 // _.each(self.collection.models, function(model){
                     // Set the url for each model
                     // model.url = model.get('resource_uri');
@@ -21,7 +21,7 @@ FED2.GameView = Backbone.View.extend({
                 // Call the addTournament method
                 // self.addTournament();
 
-                // hacky way to add the names to the teams                
+                // hacky way to add the names to the teams
                 $.getJSON(
                     'https://api.leaguevine.com/v1/games/88515/?access_token=301778fcb1',
                     function(data) {
@@ -35,7 +35,7 @@ FED2.GameView = Backbone.View.extend({
             }
         });
 
-		//this.render();	
+		//this.render();
 
 		// Attach eventhandlers to collection
         this.collection.on("reset", this.render, this);
@@ -74,17 +74,17 @@ FED2.GameView = Backbone.View.extend({
             team_2_score: '0',
             season_id: config.season_id
         }
-        
+
         // Instantiate a new model and stored it in the variable "newModel"
         // Pass the data to the new model as a parameter
         var newModel = new FED2.Set(tournament);
 
         // Set the API url
         newModel.url = config.api_url;
-        
+
         // Save a new model to the API, this is a "POST" request
         // the save function takes two parameters,
-        
+
         // newModel.save(
         //     // The first parameter is the data object
         //     newModel.toJSON(), {

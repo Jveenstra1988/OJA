@@ -6,7 +6,7 @@ var Router = Backbone.Router.extend({
 	routes: {
 		"": "home",
 		"game/:id": "game",
-		"ranking":"ranking"
+		"ranking": "ranking"
 	},
 	// the `home` action renders the schedule
 	home: schedule.render,
@@ -15,8 +15,9 @@ var Router = Backbone.Router.extend({
 		var game = new FED2.GameView({id: id});
 		// console.log(id);
 	},
-	ranking: function(id) {
-		// console.log('load the game page');
+
+	ranking: function() {
+		console.log('load the ranking page');
 		var ranking = new FED2.PoolView();
 		// console.log(id);
 	}
