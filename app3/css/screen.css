@@ -1,0 +1,142 @@
+﻿* {
+	margin:0;
+	padding:0;
+}
+body {
+	padding-top:20px;
+	padding-top:20px;
+	background-image:url(../img/bg.png);
+	background-repeat: repeat-x;
+	background-attachment:fixed;
+}
+
+article {
+	width:100%;
+	padding:2%;
+}
+
+h1 {
+	font-family: helvetica;
+	font-size:1.2em;
+	background-color: rgba(64,83,78,0.7);
+	border-radius: 6px;
+	width:90%;
+	padding:12px;
+	color: #fefecf;
+	font-weight: normal;
+}
+h2 {
+	font-weight:normal;
+	font-size:1em;
+}
+label{
+}
+
+form {
+	float:left;
+	margin-left:20px;
+	display:none;
+}
+ul {
+	list-style:none;
+}
+	nav.actions li {
+		display:inline;
+		margin-right:10px;
+	}
+	nav.actions li button {
+		padding:2px 5px;
+		line-height:1.5;
+	}
+	ul.tournaments {
+		width:600px;
+	}
+	ul.tournaments li {
+		margin:20px 20px 20px 0;
+		padding:10px;
+		overflow:hidden;
+		position:relative;
+		border: 1px solid;
+	}
+	ul.tournaments h1,
+	form h1 {
+		text-align:left;
+		font-size:1.25em;
+		margin-left:0;
+	}
+	ul.tournaments p {
+		position:absolute;
+		right:10px;
+		bottom:22px;
+	}
+tbody {
+
+}
+
+table{
+}
+
+table th {
+	padding: 8px 12px;
+	background-color: rgba(61,82,78,0.6);
+	font-family: helvetica;
+	color: #fefecf;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+table td {
+	padding: 8px 12px;
+	background-color: rgba(95,124,104,0.6);
+	font-family: helvetica;
+	color: #fefecf;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.first{
+	border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;	
+	-webkit-border-bottom-left-radius:5px;
+
+	border-top-left-radius:5px;
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+}
+
+.last{
+	border-bottom-right-radius:5px;
+	-moz-border-radius-bottomleft:5px;	
+	-webkit-border-bottom-right-radius:5px;
+
+	border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+}
+
+th {
+	display: table-cell;
+	vertical-align: inherit;
+}
+
+.delete {
+	text-decoration: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+	body {
+		background-image:url(../img/bg_480x800.png);
+		background-repeat: repeat-x;
+
+	}
+}
+
+@media only screen and (max-device-width: 960px) {
+	body {
+		background-image:url(../img/bg_640x960.png);
+		background-repeat: repeat-x;
+
+	}
+}
+
+
