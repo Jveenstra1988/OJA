@@ -8,8 +8,9 @@ FED2.Pool = Backbone.Collection.extend({
 
 	// Parse the relevant data from the data object
 	parse: function(data) {
-	    console.log(data);
-	    return data.objects;
+	    console.log("Data",data);
+	    return data.standings;
+	    console.log("Data standings",data.standings);
 
 	}
 

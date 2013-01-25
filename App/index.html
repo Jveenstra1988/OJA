@@ -12,12 +12,7 @@
 
         <article id="pool">
             <nav>
-                <ul>
-                    <li id="filter">
-                        <label>Choose team:</label>
-                    </li>
-                    <li><div id="showForm">Add new team</div></li>
-                </ul>
+
             </nav>
 
 
@@ -44,15 +39,13 @@
 
         <!-- Template -->
     <script id="teamTemplate" type="text/template">
-        <td class="team"><%= name %></td>
-        <td><%= start_date %></td>
-        <td><%= resource_uri %></td>
-        <td><%= Sw %></td>
-        <td><%= Sl %></td>
-        <td><%= Pw %></td>
-        <td><%= Pl %></td>
+        <td class="team"><%= team.name %></td>
+        <td><%= wins %></td>
+        <td><%= losses %></td>
+        <td><%= points_scored %></td>
 
-        <td><a href="#" class="delete">Delete</a></td>
+        <td><%= plus_minus %></td>
+
     </script>
 
 
@@ -71,7 +64,7 @@
 
     <!-- Views -->
     <script src="js/app/views/teamView.js"></script>
-    <script src="js/app/views//poolView.js"></script>
+    <script src="js/app/views/poolView.js"></script>
 
 
 </body>

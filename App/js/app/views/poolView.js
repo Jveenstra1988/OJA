@@ -33,7 +33,7 @@ FED2.PoolView = Backbone.View.extend({
 
     // Render view
     render: function () {
-        this.$el.find("table.pools").html("<tr class='definitie'><th class='team'>Team</th><th>Win</th><th>Lost</th><th>Sets won</th><th>Sets lost</th><th>Points won</th><th>Points lost</th><th>+/-</th></tr>");
+        this.$el.find("table.pools").html("<tr class='definitie'><th class='team'>Team</th><th>Win</th><th>Lost</th><th>Points</th><th>+/-</th></tr>");
 
         _.each(this.collection.models, function (item) {
 	    console.log(item.toJSON());
@@ -57,10 +57,10 @@ FED2.PoolView = Backbone.View.extend({
     addTournament: function() {
         // New tournament data
         var tournament = {
-            name: 'nieuw tournament v3',
-            start_date: '2013-05-10',
-            end_date: '2013-05-15',
-            season_id: config.season_id
+            name: 'B',
+            start_time: '2013-03-04T09:00:00+01:00',
+            tournament_id: '18519'
+            //season_id: config.season_id
         }
 
         // Instantiate a new model and stored it in the variable "newModel"
