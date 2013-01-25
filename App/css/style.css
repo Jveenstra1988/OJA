@@ -117,10 +117,13 @@ body {
 	background-image:url(../img/bg.png);
 	background-repeat: repeat-x;
 	background-attachment:fixed;
+
 }
 
+
+
 article {
-	width:100%;
+	width:94%;
 	padding:2%;
 }
 
@@ -129,7 +132,7 @@ h1 {
 	font-size:1.2em;
 	background-color: rgba(64,83,78,0.7);
 	border-radius: 6px;
-	width:90%;
+	width:100%;
 	padding:12px;
 	color: #fefecf;
 	font-weight: normal;
@@ -195,7 +198,7 @@ table th {
 }
 
 table td {
-	padding: 8px 12px;
+	padding: 18px 12px;
 	background-color: rgba(95,124,104,0.6);
 	font-family: helvetica;
 	color: #fefecf;
