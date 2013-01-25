@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Backbone.js Web App</title>
+        <link rel="stylesheet" href="css/screen.css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+    </head>
+    <body>
+		<!-- Hier kan je het menu plaatsen -->
+    	<div id='wrapper'>
+    		<!-- deze div wordt dynamisch gevuld met de views -->
+		</div>
+		
+        <script id="scheduleTemplate" type="text/template">
+			<ul>
+				<li><a href='#game/88503'>game 1</a></li>
+				<li><a href='#game/88503'>game 2</a></li>
+				<li><a href='#game/88503'>game 3</a></li>
+				<li><a href='#game/88503'>game 3</a></li>
+				<li><a href='#game/88503'>game 4</a></li>
+			</ul>
+        </script>
+
+
+        <script id="setTemplate" type="text/template">
+        <table>
+			<tr>
+				<td class="first"><%= number %></td>
+				<td ><%= team_1_name %></td>
+				<td ><%= team_1_score %></td>
+				<td ><%= team_2_name %></td>
+				<td class="last"><%= team_2_score %></td>
+			</tr>
+		</table>
+        </script>
+
+        <script id='gameTemplate' type='text/template'>
+	        <article id="league">
+				
+	        	<ul class="tournaments"></ul>
+
+	            <table>
+
+	            	<thead>
+	            		<tr>
+	            			<th class='first'>ID</th>
+	            			<th>Team 1</th>
+	            			<th>Score</th>
+	            			<th>Team 2</th>
+	            			<th class='last'>Score</th>
+	            		</tr>
+	            	</thead>
+	            	<tbody class="games"></tbody>
+	            </table>
+
+
+	        </article>
+        </script>
+		
+		<!-- Libraries -->
+        <script src="js/libs/jquery-1.7.1.min.js"></script>
+        <script src="js/libs/json2.js"></script>
+        <script src="js/libs/underscore-min.js"></script>
+        <script src="js/libs/backbone-min.js"></script>
+
+		<!-- Application -->
+		<script src="js/app/app.js"></script>
+		<script src="js/app/models/setModel.js"></script>
+		<script src="js/app/collections/gameCollection.js"></script>
+		<script src="js/app/views/setView.js"></script>
+		<script src="js/app/views/gameView.js"></script>
+		<script src="js/app/views/scheduleView.js"></script>
+		<script src="js/app/router.js"></script>
+		
+        
+    </body>
+</html>
