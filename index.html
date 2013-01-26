@@ -123,6 +123,39 @@
 				</form>
 	            </div>
         </script>
+        
+        <script id="poolTemplate" type="text/template">
+	    <article id="league">
+
+	        	<ul class="tournaments"></ul>
+
+	            <table>
+
+	            	<thead>
+	            		<tr class='definitie'>
+				    <th class='team first'>Team</th>
+				    <th>Win</th>
+				    <th>Lost</th>
+				    <th>Points</th>
+				    <th class="last">+/-</th>
+				</tr>
+	            	</thead>
+	            	<tbody class="pool"></tbody>
+	            </table>
+
+
+	        </article>
+	</script>
+
+	<script id="teamTemplate" type="text/template">
+	    <table>
+		<td class="team first"><%= team.name %></td>
+		<td><%= wins %></td>
+		<td><%= losses %></td>
+		<td><%= points_scored %></td>
+		<td class="last"><%= plus_minus %></td>
+	    </table>
+	</script>
 		
 		<!-- Libraries -->
         <script src="js/libs/jquery-1.7.1.min.js"></script>
@@ -131,13 +164,17 @@
         <script src="js/libs/backbone-min.js"></script>
 
 		<!-- Application -->
-		<script src="js/app/app.js"></script>
-		<script src="js/app/models/setModel.js"></script>
-		<script src="js/app/collections/gameCollection.js"></script>
-		<script src="js/app/views/setView.js"></script>
-		<script src="js/app/views/gameView.js"></script>
-		<script src="js/app/views/scheduleView.js"></script>
-		<script src="js/app/router.js"></script>
+	<script src="js/app/app.js"></script>
+	<script src="js/app/models/setModel.js"></script>
+	<script src="js/app/models/teamModel.js"></script>
+	<script src="js/app/collections/gameCollection.js"></script>
+	<script src="js/app/collections/poolCollection.js"></script>
+	<script src="js/app/views/setView.js"></script>
+	<script src="js/app/views/gameView.js"></script>
+	<script src="js/app/views/scheduleView.js"></script>
+	<script src="js/app/views/poolView.js"></script>
+	<script src="js/app/views/teamView.js"></script>
+	<script src="js/app/router.js"></script>
 		
         
     </body>
