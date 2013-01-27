@@ -1,5 +1,3 @@
-var FED2 = FED2 || {};
-
 var config = {
     tournamentID: 18519,
     access_token: 'e08a55d872',
@@ -21,11 +19,8 @@ FED2.Pool = Backbone.Collection.extend({
 	url: config.api_url,
 
 	// Parse the relevant data from the data object
-	parse: function(data) {
-	    console.log("Data",data);
+	parse: function(data) {	    
 	    return data.standings;
-	    console.log("Data standings",data.standings);
-
 	}
         
         

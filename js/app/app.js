@@ -1,1 +1,1 @@
-﻿var FED2 = FED2 || {};
+var FED2 = FED2 || {};

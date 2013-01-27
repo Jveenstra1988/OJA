@@ -1,6 +1,6 @@
 var schedule = new FED2.ScheduleView();
 var error404 = new FED2.errorView();
-// var game = new FED2.GameView();
+
 
 // create an object
 var Router = Backbone.Router.extend({

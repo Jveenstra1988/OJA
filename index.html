@@ -5,207 +5,206 @@
         <meta charset="UTF-8" />
         <title>Backbone.js Web App</title>
         <link rel="stylesheet" href="css/screen.css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<meta name="viewport" content="width=device-width, maximum-scale=1">	
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1">	
     </head>
     <body>
 
-    	
-		<!-- Hier kan je het menu plaatsen -->
-    	<div id='wrapper'>
-    		<!-- deze div wordt dynamisch gevuld met de views -->
-		</div>
-		
+
+
+        <div id='wrapper'>
+            <!-- deze div wordt dynamisch gevuld met de views -->
+        </div>
+
         <script id="scheduleTemplate" type="text/template">
             <header>
-    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
-    		
-    		<h1>Leaguevine App</h1>
-    	</header>
-        <table>
+                <div class="ranking_button"><a href="#ranking">Ranking</a></div>
 
-	            	<thead>
-	            		<tr>
-	            			<th class='first'>Game</th>
-	            			<th>Start time</th>
-	            			<th>Finish time</th>
-	            			<th>Total score</th>
-	            			<th class='last'>Score! </th>
-	            		</tr>
-	            	</thead>
-	            	<tbody class="schedule">
-	            	<tr>
-						<td class="first">1</td>
-						<td >12:00</td>
-						<td >13:00</td>
-						<td >unknown</td>
-						<td class="last"><a href="#game/88516"><img src="img/flag.png" /></a></td>
-					</tr>
-					<tr>
-						<td class="first">2</td>
-						<td >13:00</td>
-						<td >14:00</td>
-						<td >unknown</td>
-						<td class="last"><a href="#game/88452"><img src="img/flag.png" /></a></td>
-					</tr>
-					<tr>
-						<td class="first">3</td>
-						<td >15:00</td>
-						<td >16:00</td>
-						<td >unknown</td>
-						<td class="last"><a href="#game/88503"><img src="img/flag.png" /></a></td>
-					</tr>
-					<tr>
-						<td class="first">4</td>
-						<td >16:00</td>
-						<td >17:00</td>
-						<td >unknown</td>
-						<td class="last"><a href="#game/88504"><img src="img/flag.png" /></a></td>
-					</tr>
-			</tbody>
-	            </table>
+                <h1>Leaguevine App</h1>
+            </header>
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class='first'>Game</th>
+                        <th>Start time</th>
+                        <th>Finish time</th>
+                        <th>Total score</th>
+                        <th class='last'>Score! </th>
+                    </tr>
+                </thead>
+                <tbody class="schedule">
+                    <tr>
+                        <td class="first">1</td>
+                        <td >12:00</td>
+                        <td >13:00</td>
+                        <td >25</td>
+                        <td class="last"><a href="#game/88452"><img src="img/flag.png" /></a></td>
+                    </tr>
+                    <tr>
+                        <td class="first">2</td>
+                        <td >13:00</td>
+                        <td >14:00</td>
+                        <td >20</td>
+                        <td class="last"><a href="#game/88462"><img src="img/flag.png" /></a></td>
+                    </tr>
+                    <tr>
+                        <td class="first">3</td>
+                        <td >15:00</td>
+                        <td >16:00</td>
+                        <td >19</td>
+                        <td class="last"><a href="#game/88502"><img src="img/flag.png" /></a></td>
+                    </tr>
+                    <tr>
+                        <td class="first">4</td>
+                        <td >16:00</td>
+                        <td >17:00</td>
+                        <td >17</td>
+                        <td class="last"><a href="#game/88453"><img src="img/flag.png" /></a></td>
+                    </tr>
+                </tbody>
+            </table>
         </script>
 
 
         <script id="setTemplate" type="text/template">
-        <table>
-			<tr>
-				<td class="first"><%= number %></td>
-				<td ><%= team_1_name %></td>
-				<td ><%= team_1_score %></td>
-				<td ><%= team_2_name %></td>
-				<td class="last"><%= team_2_score %></td>
-			</tr>
-		</table>
+            <table>
+                <tr>
+                    <td class="first"><%= number %></td>
+                    <td ><%= team_1_name %></td>
+                    <td ><%= team_1_score %></td>
+                    <td ><%= team_2_name %></td>
+                    <td class="last"><%= team_2_score %></td>
+                </tr>
+            </table>
         </script>
 
         <script id='gameTemplate' type='text/template'>
             <header>
-    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
-    		<div class="home_button"><a href="">Terug</a></div>
-    		<h1>Game</h1>
-    	</header>
-	        <article id="league">
-				 <div id="scoreSet">Score een set</div>
-	        <div>
-				<form id="addGame" action="#" class="form-2">
-					<h1>Change/score set</h1>
-				
-                                    <label for="number">Set:</label>
-				    	<input id="number" placeholder="Set" type="number" />
-                                        
-				    <label for="team_1_name">Naam team 1:</label>
-				    	<input id="team_1_name" placeholder="Naam team 1" type="text"  />
+                <div class="ranking_button"><a href="#ranking">Ranking</a></div>
+                <div class="home_button"><a href="">Terug</a></div>
+                <h1>Game</h1>
+            </header>
+            <article id="league">
+                <div id="scoreSet">Score een set</div>
+                <div>
+                    <form id="addGame" action="#" class="form-2">
+                        <h1>Change/score set</h1>
 
-				    <label for="team_1_score">Score team 1:</label>
-				    	<input id="team_1_score" placeholder=" Score team 1" type="number" />
+                        <label for="number">Set:</label>
+                        <input id="number" placeholder="Set" type="number" />
 
-				    <label for="team_2_name">Naam team 2:</label>
-				    	<input id="team_2_name"  placeholder="Naam team 2" type="text" />
+                        <label for="team_1_name">Naam team 1:</label>
+                        <input id="team_1_name" placeholder="Naam team 1" type="text"  />
 
-				    <label for="team_2_score">Score team 2:</label>
-				    	<input id="team_2_score" placeholder="Score team 2" type="number" />
-                                        
-                                    <label for="is_final">Final?:</label>
-				    	<input id="is_final" type="checkbox" />
+                        <label for="team_1_score">Score team 1:</label>
+                        <input id="team_1_score" placeholder=" Score team 1" type="number" />
 
-				    <div class="clearfix"><input type="submit" id="add" value="Add" /></div>
-				</form>
-	            </div>
-	        	<ul class="tournaments"></ul>
+                        <label for="team_2_name">Naam team 2:</label>
+                        <input id="team_2_name"  placeholder="Naam team 2" type="text" />
 
-	            <table>
+                        <label for="team_2_score">Score team 2:</label>
+                        <input id="team_2_score" placeholder="Score team 2" type="number" />
 
-	            	<thead>
-	            		<tr>
-	            			<th class='first'>Set</th>
-	            			<th>Team 1</th>
-	            			<th>Score</th>
-	            			<th>Team 2</th>
-	            			<th class='last'>Score</th>
-	            		</tr>
-	            	</thead>
-	            	<tbody class="games"></tbody>
-	            </table>
+                        <label for="is_final">Final?:</label>
+                        <input id="is_final" type="checkbox" />
 
-	            
+                        <div class="clearfix"><input type="submit" id="add" value="Add" /></div>
+                    </form>
+                </div>
+                <ul class="tournaments"></ul>
+                
+                <table>
 
-	        </article>
-               
+                    <thead>
+                        <tr>
+                            <th class='first'>Set</th>
+                            <th>Team 1</th>
+                            <th>Score</th>
+                            <th>Team 2</th>
+                            <th class='last'>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody class="games"></tbody>
+                    <div id="unload"></div>
+                </table>
+                
+            </article>
+
         </script>
-        
+
         <script id="poolTemplate" type="text/template">
             <header>
-    		<div class="ranking_button"><a href="">Schedule</a></div>
-    		<div class="home_button"><a href="">Terug</a></div>
-    		<h1>Ranking</h1>
-    	</header>
-	    <article id="league">
+                <div class="ranking_button"><a href="">Schedule</a></div>
+                <div class="home_button"><a href="">Terug</a></div>
+                <h1>Ranking</h1>
+            </header>
+            <article id="league">
 
-	        	<ul class="tournaments"></ul>
+                <ul class="tournaments"></ul>
 
-	            <table>
+                <table>
 
-	            	<thead>
-	            		<tr class='definitie'>
-				    <th class='team first'>Team</th>
-				    <th id="filterwins">Win</th>
-				    <th>Lost</th>
-				    <th>Points</th>
-				    <th class="last">+/-</th>
-				</tr>
-	            	</thead>
-	            	<tbody class="pool"></tbody>
-	            </table>
+                    <thead>
+                        <tr class='definitie'>
+                            <th class='team first'>Team</th>
+                            <th id="filterwins">Win</th>
+                            <th>Lost</th>
+                            <th>Points</th>
+                            <th class="last">+/-</th>
+                        </tr>
+                    </thead>
+                    <tbody class="pool"></tbody>
+                </table>
 
 
-	        </article>
-	</script>
-        
-         <script id="404Template" type="text/template">
-             <header>
-    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
-    		<div class="home_button"><a href="">Terug</a></div>
-    		<h1>Niet gevonden</h1>
-    	</header>
-	    <article id="league">
+            </article>
+        </script>
+
+        <script id="404Template" type="text/template">
+            <header>
+                <div class="ranking_button"><a href="#ranking">Ranking</a></div>
+                <div class="home_button"><a href="">Terug</a></div>
+                <h1>Niet gevonden</h1>
+            </header>
+            <article id="league">
                 <h1>
                     Oeps! We konden de opgevraagde pagina niet vinden :(
                 </h1>
-                <a href="">Klik hier om naar home te gaan</a>
-	   </article>
-	</script>
+                <a class="to-home" href="">Klik hier om naar home te gaan</a>
+            </article>
+        </script>
 
-	<script id="teamTemplate" type="text/template">
-	    <table>
-		<td class="team first"><%= team.name %></td>
-		<td><%= wins %></td>
-		<td><%= losses %></td>
-		<td><%= points_scored %></td>
-		<td class="last"><%= plus_minus %></td>
-	    </table>
-	</script>
-    
-		<!-- Libraries -->
+        <script id="teamTemplate" type="text/template">
+            <table>
+                <td class="team first"><%= team.name %></td>
+                <td><%= wins %></td>
+                <td><%= losses %></td>
+                <td><%= points_scored %></td>
+                <td class="last"><%= plus_minus %></td>
+            </table>
+        </script>
+
+        <!-- Libraries -->
         <script src="js/libs/jquery-1.7.1.min.js"></script>
         <script src="js/libs/json2.js"></script>
         <script src="js/libs/underscore-min.js"></script>
         <script src="js/libs/backbone-min.js"></script>
 
-		<!-- Application -->
-	<script src="js/app/app.js"></script>
-	<script src="js/app/models/setModel.js"></script>
-	<script src="js/app/models/teamModel.js"></script>
-	<script src="js/app/collections/gameCollection.js"></script>
-	<script src="js/app/collections/poolCollection.js"></script>
-	<script src="js/app/views/setView.js"></script>
-	<script src="js/app/views/gameView.js"></script>
-	<script src="js/app/views/scheduleView.js"></script>
-	<script src="js/app/views/poolView.js"></script>
-	<script src="js/app/views/teamView.js"></script>
-	<script src="js/app/views/errorView.js"></script>
-	<script src="js/app/router.js"></script>
-	
-        
+        <!-- Application -->
+        <script src="js/app/app.js"></script>
+        <script src="js/app/models/setModel.js"></script>
+        <script src="js/app/models/teamModel.js"></script>
+        <script src="js/app/collections/gameCollection.js"></script>
+        <script src="js/app/collections/poolCollection.js"></script>
+        <script src="js/app/views/setView.js"></script>
+        <script src="js/app/views/gameView.js"></script>
+        <script src="js/app/views/scheduleView.js"></script>
+        <script src="js/app/views/poolView.js"></script>
+        <script src="js/app/views/teamView.js"></script>
+        <script src="js/app/views/errorView.js"></script>
+        <script src="js/app/router.js"></script>
+
+
     </body>
 </html>

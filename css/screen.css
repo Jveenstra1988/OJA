@@ -235,3 +235,19 @@ th {
 }
 
 
+a.to-home{
+    text-align: center;
+display: block;
+color: #fff;
+margin-top: 25px;
+background:#4a6f68;
+    padding:10px;
+    color:#fefecf;
+    text-align:center;
+    font-weight:bold;
+    width:94%;
+    opacity:0.75;
+    margin-bottom:10px;
+    margin-top:2px;
+
+}

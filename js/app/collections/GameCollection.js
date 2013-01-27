@@ -22,7 +22,8 @@ FED2.League = Backbone.Collection.extend({
     	// data is API DATA
     	// ugly because we can't use the `GET /game_scores/{score_id}/` call
     	var game = _.find(data.objects, function(gameScore) { return gameScore.game_id == this.id }, this);
-
+        
+        
     	// als game nu leeg is kunnen we de game niet vinden
     	return game.game_sets;
         
