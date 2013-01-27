@@ -10,18 +10,18 @@
     </head>
     <body>
 
-    	<header>
-    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
-    		<div class="home_button"><a href="">home</a></div>
-    		<h1>Leaguevine App</h1>
-    	</header>
+    	
 		<!-- Hier kan je het menu plaatsen -->
     	<div id='wrapper'>
     		<!-- deze div wordt dynamisch gevuld met de views -->
 		</div>
 		
         <script id="scheduleTemplate" type="text/template">
-
+            <header>
+    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
+    		
+    		<h1>Leaguevine App</h1>
+    	</header>
         <table>
 
 	            	<thead>
@@ -53,7 +53,7 @@
 						<td >15:00</td>
 						<td >16:00</td>
 						<td >unknown</td>
-						<td class="last"><a href="#game/88503"><img src="img/flag.png" /></a></td>
+						<td class="last"><a href="#game/88503">></a></td>
 					</tr>
 					<tr>
 						<td class="first">4</td>
@@ -80,6 +80,11 @@
         </script>
 
         <script id='gameTemplate' type='text/template'>
+            <header>
+    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
+    		<div class="home_button"><a href="">Terug</a></div>
+    		<h1>Game</h1>
+    	</header>
 	        <article id="league">
 				
 	        	<ul class="tournaments"></ul>
@@ -126,6 +131,11 @@
         </script>
         
         <script id="poolTemplate" type="text/template">
+            <header>
+    		<div class="ranking_button"><a href="">Schedule</a></div>
+    		<div class="home_button"><a href="">Terug</a></div>
+    		<h1>Ranking</h1>
+    	</header>
 	    <article id="league">
 
 	        	<ul class="tournaments"></ul>
@@ -149,6 +159,11 @@
 	</script>
         
          <script id="404Template" type="text/template">
+             <header>
+    		<div class="ranking_button"><a href="#ranking">Ranking</a></div>
+    		<div class="home_button"><a href="">Terug</a></div>
+    		<h1>Niet gevonden</h1>
+    	</header>
 	    <article id="league">
                 <h1>
                     Oeps! We konden de opgevraagde pagina niet vinden :(

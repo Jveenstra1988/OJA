@@ -14,13 +14,14 @@ article {
 }
 
 header{
-	background: url(../img/header_bg.png) repeat-x;
+	background: url('../img/header_bg.png') repeat-x;
+        width:100%;
 }
 
 h1 {
 	font-family: helvetica;
-	font-size:1.2em;
-	width:100%;
+	font-size:1.1em;
+	
 	padding:12px;
 	color: white;
 	font-weight: normal;
@@ -74,7 +75,7 @@ tbody {
 
 }
 
-table { width: 96%; }
+table { width: 100%; }
 
 table th {
 	padding: 8px 12px;
