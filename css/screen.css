@@ -22,7 +22,6 @@ h1 {
 	font-size:1.2em;
 	width:100%;
 	padding:12px;
-	display:inline-block;
 	color: white;
 	font-weight: normal;
 	text-align: center;
@@ -37,7 +36,7 @@ label{
 form {
 	float:left;
 	margin-left:20px;
-	display:block;
+	display:none;
 }
 ul {
 	list-style:none;
@@ -138,7 +137,7 @@ th {
 .ranking_button{
 	background:url(../img/button.png) repeat-x;
 	float:right;
-	margin-top: -38px;
+	margin-top: 10px;
 	margin-right: 12px;
 	height:21px;
 	width: 76px;
@@ -152,7 +151,33 @@ th {
 	color: #0d7070;
 	text-shadow: 0px 1px white;
 	font-weight: bold;
+}
 
+.ranking_button a,
+.home_button a
+{
+	text-decoration: none;
+	color: #0d7070;
+	text-shadow: 0px 1px white;
+}
+
+.home_button{
+	background:url(../img/button.png) repeat-x;
+	float:left;
+	margin-top: 10px;
+	margin-left: 12px;
+	height:21px;
+	width: 76px;
+	padding-top: 5px;
+	text-align: center;
+	border-radius: 6px;
+	font-family: helvetica;
+	font-size:13px;
+	border: solid 1px #34979b;
+	border-bottom: solid 1px #24747b;
+	color: #0d7070;
+	text-shadow: 0px 1px white;
+	font-weight: bold;
 }
 
 @media only screen and (max-device-width: 480px) {
