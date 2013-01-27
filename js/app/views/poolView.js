@@ -59,7 +59,7 @@ FED2.PoolView = Backbone.View.extend({
     },
 
     // Add a tournament
-    addTournament: function() {
+  //  addTournament: function() {
 //        console.log('adding..')
 //        $("#addGame").children("input").each(function (i, el) {
 //	        if ($(el).val() !== "") {
@@ -102,6 +102,6 @@ FED2.PoolView = Backbone.View.extend({
 //                Authorization: 'bearer '+config.access_token
 //            }
 //        });
-    }
+ //   }
 });
 

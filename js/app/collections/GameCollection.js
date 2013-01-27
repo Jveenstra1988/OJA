@@ -24,7 +24,7 @@ FED2.League = Backbone.Collection.extend({
     	var game = _.find(data.objects, function(gameScore) { return gameScore.game_id == this.id }, this);
 
     	// als game nu leeg is kunnen we de game niet vinden
-    	return data.game_sets;
-        console.log("sets:",data.game_sets);
+    	return game.game_sets;
+        
     }   
 });
