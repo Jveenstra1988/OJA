@@ -45,7 +45,7 @@ FED2.GameView = Backbone.View.extend({
         this.collection.on("add", this.renderLeague, this);
     },
     events: {	    
-	"click #add": "addTournament",
+	"click #add": "addSet",
         "click #scoreSet": "showForm"
     },
     template: $("#gameTemplate").html(),
@@ -72,12 +72,13 @@ FED2.GameView = Backbone.View.extend({
     },
 
     // Add a tournament
-    addTournament: function(e) {
+    addSet: function(e) {
        e.preventDefault();
         
     // New tournament data
-            var tournament = {
-                game_id: '87012',
+            var set = {
+                game_id: '88503',
+                start_time: '2013-01-27T16:12:23.935244+01:00',
                 team_1: 'hallo',
                 team_1_score: '0',
                 team_2: 'boe',
@@ -87,21 +88,24 @@ FED2.GameView = Backbone.View.extend({
             
             // Instantiate a new model and stored it in the variable "newModel"
             // Pass the data to the new model as a parameter
-            var newModel = new FED2.Set(tournament);
-            newModel = new FED2.League;
+            var newModel = new FED2.Set(set);
+           // newModel = new FED2.League;
             // Set the API url
             newModel.url = config.api_url;
-            
+            console.log(newModel.url)
             // Save a new model to the API, this is a "POST" request
             // the save function takes two parameters,
             
              newModel.save(
+        
                  // The first parameter is the data object
                  newModel.toJSON(), {
+                                
                  // The second parameter takes request options
                 success: function(data) {
                      // On succes set the new url for the model
                      newModel.url = newModel.get('resource_uri');
+                     
                  },
                  error: function(data) {
                      // On error log the error in the console
