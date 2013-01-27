@@ -45,7 +45,8 @@ FED2.GameView = Backbone.View.extend({
         this.collection.on("add", this.renderLeague, this);
     },
     events: {	    
-	"click #add": "addTournament"
+	"click #add": "addTournament",
+        "click #scoreSet": "showForm"
     },
     template: $("#gameTemplate").html(),
     // Render the view
@@ -117,8 +118,12 @@ FED2.GameView = Backbone.View.extend({
      console.log('toegevoegd')      
      //newModel.save(game.sets, options)
    
-    }
+    },
+    showForm: function (e) {
+	    e.preventDefault();
+	    this.$el.find("#addGame").slideToggle();
+	}
 
-
+    
 
 });

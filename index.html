@@ -86,14 +86,36 @@
     		<h1>Game</h1>
     	</header>
 	        <article id="league">
+				 <div id="scoreSet">Score een set</div>
+	        <div>
+				<form id="addGame" action="#" class="form-2">
+					<h1>Change/score set</h1>
 				
+                                    <label for="number">Set:</label>
+				    	<input id="number" placeholder="Set" type="number" />
+                                        
+				    <label for="team_1_name">Naam team 1:</label>
+				    	<input id="team_1_name" placeholder="Naam team 1" type="text" />
+
+				    <label for="team_1_score">Score team 1:</label>
+				    	<input id="team_1_score" placeholder=" Score team 1" type="number" />
+
+				    <label for="team_2_name">Naam team 2:</label>
+				    	<input id="team_2_name"  placeholder="Naam team 2" type="text" />
+
+				    <label for="team_2_score">Score team 2:</label>
+				    	<input id="team_2_score" placeholder="Score team 2" type="number" />
+
+				    <div class="clearfix"><input type="submit" id="add" value="Add" /></div>
+				</form>
+	            </div>
 	        	<ul class="tournaments"></ul>
 
 	            <table>
 
 	            	<thead>
 	            		<tr>
-	            			<th class='first'>ID</th>
+	            			<th class='first'>Set</th>
 	            			<th>Team 1</th>
 	            			<th>Score</th>
 	            			<th>Team 2</th>
@@ -106,28 +128,7 @@
 	            
 
 	        </article>
-
-	        <div>
-				<form id="addGame" action="#" class="form-2">
-					<h1>Add game</h1>
-				    <label for="number">team1Score:</label>
-				    	<input id="number" placeholder=" number" type="number" />
-
-				    <label for="team_1_name">team1Score:</label>
-				    	<input id="team_1_name" placeholder=" team_1_name" type="text" />
-
-				    <label for="team_1_score">team1Score:</label>
-				    	<input id="team_1_score" placeholder=" team_1_score" type="number" />
-
-				    <label for="team_2_name">team2Score:</label>
-				    	<input id="team_2_name"  placeholder="team_2_name" type="text" />
-
-				    <label for="team_2_score">team1Score:</label>
-				    	<input id="team_2_score" placeholder=" team_2_score" type="number" />
-
-				    <div class="clearfix"><input type="submit" id="add" value="Add" /></div>
-				</form>
-	            </div>
+               
         </script>
         
         <script id="poolTemplate" type="text/template">
@@ -145,7 +146,7 @@
 	            	<thead>
 	            		<tr class='definitie'>
 				    <th class='team first'>Team</th>
-				    <th>Win</th>
+				    <th id="filterwins">Win</th>
 				    <th>Lost</th>
 				    <th>Points</th>
 				    <th class="last">+/-</th>
@@ -181,7 +182,7 @@
 		<td class="last"><%= plus_minus %></td>
 	    </table>
 	</script>
-		
+    
 		<!-- Libraries -->
         <script src="js/libs/jquery-1.7.1.min.js"></script>
         <script src="js/libs/json2.js"></script>
@@ -201,7 +202,7 @@
 	<script src="js/app/views/teamView.js"></script>
 	<script src="js/app/views/errorView.js"></script>
 	<script src="js/app/router.js"></script>
-		
+	
         
     </body>
 </html>

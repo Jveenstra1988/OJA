@@ -6,6 +6,7 @@ body {
 	background-image:url(../img/bg.png);
 	background-repeat: repeat-x;
 	background-attachment:fixed;
+        font-family:calibri, sans-serif;
 }
 
 article {
@@ -36,9 +37,42 @@ label{
 
 form {
 	float:left;
-	margin-left:20px;
-	display:none;
+        padding:10px;
+        width:85%;
+        display:none;
+        
+       
 }
+
+form label{
+    color:#fff;
+    margin-top:10px;
+    display:block;
+}
+
+form input{
+    display:block;
+    width:100%;
+    padding:10px;
+}
+
+form input#add{
+    width: 102%;
+margin-top: 20px;
+}
+
+
+
+#scoreSet{
+    background:#fff;
+    padding:10px;
+    color:#999;
+    text-align:center;
+    font-weight:bold;
+    width:94%;
+}
+
+
 ul {
 	list-style:none;
 }
