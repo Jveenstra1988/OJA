@@ -37,7 +37,7 @@ label{
 form {
 	float:left;
 	margin-left:20px;
-	display:none;
+	display:block;
 }
 ul {
 	list-style:none;

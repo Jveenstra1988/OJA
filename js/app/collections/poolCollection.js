@@ -2,7 +2,7 @@ var FED2 = FED2 || {};
 
 var config = {
     tournamentID: 18519,
-    access_token: '109f8a19ae',
+    access_token: 'e08a55d872',
     api_url: 'https://api.leaguevine.com/v1/pools/18744/',
     season_id: '20167'
 };
@@ -11,7 +11,11 @@ var config = {
 FED2.Pool = Backbone.Collection.extend({
     // Specifiy model for this collection
 	model: FED2.Team,
-
+        
+        comparator : function(league) {
+		return -league.get("wins");
+	},
+        
 	// Set the url for the collection
 	url: config.api_url,
 
@@ -22,6 +26,9 @@ FED2.Pool = Backbone.Collection.extend({
 	    console.log("Data standings",data.standings);
 
 	}
+        
+        
+        
 
 
 });
