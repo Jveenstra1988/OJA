@@ -73,7 +73,7 @@ FED2.GameView = Backbone.View.extend({
     // Add a tournament
     addTournament: function(e) {
        e.preventDefault();
-        console.log('HOI!')
+        
     // New tournament data
             var tournament = {
                 game_id: '87012',
@@ -87,7 +87,7 @@ FED2.GameView = Backbone.View.extend({
             // Instantiate a new model and stored it in the variable "newModel"
             // Pass the data to the new model as a parameter
             var newModel = new FED2.Set(tournament);
-    
+            newModel = new FED2.League;
             // Set the API url
             newModel.url = config.api_url;
             
@@ -114,7 +114,8 @@ FED2.GameView = Backbone.View.extend({
                 }
                 
              });
-     newModel.save(data, options)
+     console.log('toegevoegd')      
+     //newModel.save(game.sets, options)
    
     }
 

@@ -56,7 +56,7 @@ FED2.PoolView = Backbone.View.extend({
 
         // Append the rendered HTML to the views element
         this.list.append(teamView.render().el);
-    },
+    }
 
     // Add a tournament
   //  addTournament: function() {
