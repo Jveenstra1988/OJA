@@ -56,6 +56,10 @@ form input{
     padding:10px;
 }
 
+form #is_final{
+    width:1%;
+}
+
 form input#add{
     width: 102%;
 margin-top: 20px;
